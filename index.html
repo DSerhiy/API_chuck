@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Webpack</title>
-  <link rel="stylesheet" href="dist/main.css">
+  <link rel="stylesheet" href="dist/app.css">
 </head>
+
 <body>
-  
+
+  <header class="header">
+    <img src="https://assets.chucknorris.host/img/chucknorris_logo_coloured_small@2x.png" alt="logo">
+  </header>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <img src="https://assets.chucknorris.host/img/avatar/chuck-norris.png" alt="photo">
+      </div>
+      <div class="card-body">
+        <button type="button" class="btn btn-outline-primary">Next Joke</button>
+        <blockquote class="blockquote mb-0">
+          <p id='joke'>Chuck Norris' last kid was born 10 months after his 23rd vasectomy.</p>
+          <footer class="blockquote-footer"><cite title="Source Title">Chuck Norris the best</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
   <script src="dist/app.js"></script>
 </body>
+
 </html>
