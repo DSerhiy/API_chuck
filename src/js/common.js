@@ -8,14 +8,14 @@ window.onload = function () {
     const newJokePromise = getRendomJoke();
     cardEl.classList.toggle('hide');
 
-    setTimeout(() => {
+    cardEl.addEventListener('transitionend', function handler() {
+      cardEl.removeEventListener('transitionend', handler);
       newJokePromise
         .then(joke => jokeEl.textContent = joke)
         .catch(() => jokeEl.textContent = 'Chuck is sleeping, try next time...');
 
-      cardEl.classList.toggle('hide');
-
-    }, 600);
+      cardEl.classList.toggle('hide');            
+    });
   });
 }
 
@@ -29,3 +29,4 @@ function getRendomJoke() {
 
   return jokePromise;
 }
+
